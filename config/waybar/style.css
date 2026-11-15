@@ -90,3 +90,15 @@ tooltip label { color: @on_background; }
   padding: 8px 0;
   border-radius: 14px;
 }
+
+/* Pinned apps under the clock (white icons) */
+#image.zen, #image.t3 {
+  background: @surface_container;
+  padding: 8px 0;
+  margin: 3px 7px;
+  border-radius: 6px;
+  min-width: 42px;
+  transition: background 0.2s ease;
+}
+#image.zen { margin-top: 14px; }
+#image.zen:hover, #image.t3:hover { background: @surface_variant; }

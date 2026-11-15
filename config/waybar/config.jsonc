@@ -3,7 +3,7 @@
   "layer": "top",
   "width": 56,
 
-  "modules-left":   ["clock"],
+  "modules-left":   ["clock", "image#zen", "image#t3"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right":  ["tray", "pulseaudio", "custom/notifications", "network", "battery", "custom/power"],
 
@@ -24,6 +24,20 @@
       "mode": "month",
       "format": { "today": "<span color='#a2c56e'><b>{}</b></span>" }
     }
+  },
+
+  "image#zen": {
+    "path": "/home/nato/.config/waybar/icons/zen.png",
+    "size": 20,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/launch.sh zen"
+  },
+
+  "image#t3": {
+    "path": "/home/nato/.config/waybar/icons/t3.png",
+    "size": 20,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/launch.sh t3"
   },
 
   "tray": { "icon-size": 16, "spacing": 12 },
