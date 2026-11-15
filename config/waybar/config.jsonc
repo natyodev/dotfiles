@@ -5,7 +5,7 @@
 
   "modules-left":   ["clock", "image#zen", "image#t3"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right":  ["tray", "pulseaudio", "custom/notifications", "network", "battery", "custom/power"],
+  "modules-right":  ["tray", "pulseaudio", "custom/apps", "network", "battery", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{id}",
@@ -53,12 +53,11 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
   },
 
-  "custom/notifications": {
+  "custom/apps": {
     "format": "󰕰",
     "justify": "center",
-    "tooltip-format": "Left: show last notification · Right: do not disturb",
-    "on-click": "dunstctl history-pop",
-    "on-click-right": "dunstctl set-paused toggle"
+    "tooltip-format": "Apps",
+    "on-click": "pkill -x rofi || rofi -show drun"
   },
 
   "network": {

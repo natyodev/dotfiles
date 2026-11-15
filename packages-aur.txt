@@ -1,3 +1,4 @@
 mpvpaper
 neofetch
+t3code-bin
 yay-bin

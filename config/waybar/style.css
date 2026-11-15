@@ -62,7 +62,7 @@ tooltip label { color: @on_background; }
 }
 
 /* Small square buttons at the bottom */
-#pulseaudio, #custom-notifications, #network, #battery, #custom-power {
+#pulseaudio, #custom-apps, #network, #battery, #custom-power {
   background: @surface_container;
   color: @on_background;
   padding: 6px 0;
@@ -73,7 +73,7 @@ tooltip label { color: @on_background; }
   transition: background 0.2s ease;
 }
 
-#pulseaudio:hover, #custom-notifications:hover, #network:hover,
+#pulseaudio:hover, #custom-apps:hover, #network:hover,
 #battery:hover, #custom-power:hover {
   background: @surface_variant;
 }
