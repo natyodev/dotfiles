@@ -1,0 +1,12 @@
+/* Forest palette (Quiet Fracture layout) */
+@define-color background        #0b1612;
+@define-color surface           #10201a;
+@define-color surface_container #172a22;
+@define-color surface_variant   #24382d;
+@define-color on_background     #d6e6cf;
+@define-color muted             #6f8a73;
+@define-color primary           #a2c56e;
+@define-color tertiary          #5fa892;
+@define-color mint              #9fd8b5;
+@define-color amber             #e0a854;
+@define-color rust              #d9774b;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Zen Browser
+GenericName=Web Browser
+Exec=/home/nato/zen-browser/zen %u
+Icon=/home/nato/zen-browser/browser/chrome/icons/default/default128.png
+StartupWMClass=zen
+Categories=Network;WebBrowser;
+MimeType=text/html;x-scheme-handler/http;x-scheme-handler/https;
+Terminal=false

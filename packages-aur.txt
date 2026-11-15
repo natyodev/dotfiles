@@ -1,0 +1,4 @@
+brave-bin
+mpvpaper
+neofetch
+yay-bin

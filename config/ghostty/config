@@ -1,0 +1,10 @@
+# Ghostty Terminal Configuration
+
+# Window padding (space around the terminal content)
+window-padding-x = 15
+window-padding-y = 15
+
+# Forest theme (~/.config/ghostty/themes/forest)
+theme = forest
+background-opacity = 0.88
+font-family = JetBrainsMono Nerd Font

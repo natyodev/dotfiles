@@ -1,0 +1,7 @@
+[user]
+	name = adspampin
+	email = adam.spampinato@gmail.com
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true

@@ -1,0 +1,19 @@
+/* Forest dock — mossy glass */
+window {
+  background: rgba(10, 22, 17, 0.55);
+  border-radius: 18px;
+  border: 1px solid rgba(162, 197, 110, 0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+#box { padding: 6px 10px; }
+button, image { background: none; border: none; box-shadow: none; color: #d6e6cf; }
+button {
+  padding: 6px; margin: 0 3px; border-radius: 12px; font-size: 12px;
+  transition: background-color 150ms ease;
+}
+button:hover { background-color: rgba(136, 175, 100, 0.22); }
+button:focus { box-shadow: none; }
+#active {
+  border-bottom: 2px solid #a2c56e;
+  border-radius: 12px 12px 4px 4px;
+}

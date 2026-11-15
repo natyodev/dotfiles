@@ -1,0 +1,73 @@
+{
+  "position": "left",
+  "layer": "top",
+  "width": 56,
+
+  "modules-left":   ["clock"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right":  ["tray", "pulseaudio", "custom/notifications", "network", "battery", "custom/power"],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "on-scroll-up":   "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+    "persistent-workspaces": { "*": 5 }
+  },
+
+  "clock": {
+    "format": "{:%I\n%M\n<span size='x-small' weight='600'>%p</span>}",
+    "interval": 10,
+    "justify": "center",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "format": { "today": "<span color='#a2c56e'><b>{}</b></span>" }
+    }
+  },
+
+  "tray": { "icon-size": 16, "spacing": 12 },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+    "tooltip-format": "Volume {volume}%",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+
+  "custom/notifications": {
+    "format": "󰕰",
+    "justify": "center",
+    "tooltip-format": "Left: show last notification · Right: do not disturb",
+    "on-click": "dunstctl history-pop",
+    "on-click-right": "dunstctl set-paused toggle"
+  },
+
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "battery": {
+    "states": { "warning": 25, "critical": 12 },
+    "format": "{icon}",
+    "format-charging": "󰂄",
+    "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
+    "tooltip-format": "{capacity}% · {timeTo}"
+  },
+
+  "custom/power": {
+    "format": "󰐥",
+    "justify": "center",
+    "tooltip-format": "Power menu",
+    "on-click": "~/.config/rofi/powermenu.sh"
+  }
+}
