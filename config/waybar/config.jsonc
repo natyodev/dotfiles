@@ -3,9 +3,9 @@
   "layer": "top",
   "width": 56,
 
-  "modules-left":   ["clock", "image#zen", "image#t3"],
+  "modules-left":   ["clock", "image#zen", "image#t3", "image#grok"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right":  ["tray", "pulseaudio", "custom/apps", "network", "battery", "custom/power"],
+  "modules-right":  ["tray", "pulseaudio", "custom/apps", "network", "memory", "battery", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{id}",
@@ -40,6 +40,13 @@
     "on-click": "~/.config/waybar/launch.sh t3"
   },
 
+  "image#grok": {
+    "path": "/home/nato/.config/waybar/icons/grok.png",
+    "size": 20,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/launch.sh grok"
+  },
+
   "tray": { "icon-size": 16, "spacing": 12 },
 
   "pulseaudio": {
@@ -67,6 +74,15 @@
     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "<span size='small'>󰍛</span>\n<span size='x-small' weight='700'>{percentage}%</span>",
+    "justify": "center",
+    "states": { "warning": 75, "critical": 90 },
+    "tooltip-format": "RAM {used:0.1f} / {total:0.1f} GiB ({percentage}%)\nSwap {swapUsed:0.1f} / {swapTotal:0.1f} GiB",
+    "on-click": "ghostty -e htop"
   },
 
   "battery": {

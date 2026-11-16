@@ -20,7 +20,7 @@ local dock        = 'nwg-dock-hyprland -d -hd 150 -i 40 -mb 8 -c "rofi -show dru
 --  AUTOSTART  --
 -----------------
 hl.on("hyprland.start", function()
-    hl.exec_cmd("~/.config/hypr/scripts/wallpaper.sh") -- animated forest (mpvpaper) or still (hyprpaper)
+    hl.exec_cmd("~/.config/hypr/scripts/wallpaper.sh") -- still wallpaper (hyprpaper.conf)
     hl.exec_cmd("waybar")
     hl.exec_cmd(dock)                                  -- bottom dock, shows when mouse hits bottom edge
     hl.exec_cmd(browser)

@@ -62,7 +62,7 @@ tooltip label { color: @on_background; }
 }
 
 /* Small square buttons at the bottom */
-#pulseaudio, #custom-apps, #network, #battery, #custom-power {
+#pulseaudio, #custom-apps, #network, #memory, #battery, #custom-power {
   background: @surface_container;
   color: @on_background;
   padding: 6px 0;
@@ -73,12 +73,14 @@ tooltip label { color: @on_background; }
   transition: background 0.2s ease;
 }
 
-#pulseaudio:hover, #custom-apps:hover, #network:hover,
+#pulseaudio:hover, #custom-apps:hover, #network:hover, #memory:hover,
 #battery:hover, #custom-power:hover {
   background: @surface_variant;
 }
 
 #pulseaudio.muted, #network.disconnected { color: @muted; }
+#memory.warning                    { color: @amber; }
+#memory.critical                   { color: @rust; }
 #battery.charging                  { color: @primary; }
 #battery.warning:not(.charging)    { color: @amber; }
 #battery.critical:not(.charging)   { color: @rust; }
@@ -92,7 +94,7 @@ tooltip label { color: @on_background; }
 }
 
 /* Pinned apps under the clock (white icons) */
-#image.zen, #image.t3 {
+#image.zen, #image.t3, #image.grok {
   background: @surface_container;
   padding: 8px 0;
   margin: 3px 7px;
@@ -101,4 +103,4 @@ tooltip label { color: @on_background; }
   transition: background 0.2s ease;
 }
 #image.zen { margin-top: 14px; }
-#image.zen:hover, #image.t3:hover { background: @surface_variant; }
+#image.zen:hover, #image.t3:hover, #image.grok:hover { background: @surface_variant; }
